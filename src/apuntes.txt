@@ -1,0 +1,23 @@
+// la abstraccion un objeto que se lleva a la realidad por ejemplo un artista hace una pintura del paisaje eso es abstraccion y dentro de la abstraccion hay atributos (caracteristicas)
+// encapsulamiento 
+
+//personaje 
+
+
+atributos tiene caracteristicas y comportamiento
+
+//caracteristicas
+*/ String name;
+    String lastName;
+    int life;
+    boolean isHeAlive = true;
+
+
+//comportamiento 
+
+void eat();
+int attack();
+
+¿Que es un UML?
+
+//Reglas del dominio
