@@ -1,68 +1,91 @@
 public class Personaje {
+
     private String nombre;
+
     String apellido;
+
     private int vida;
+
     boolean esta_vivo = true;
-    private int edad;
 
-    public void setNombre(String nombre){
+    public void validarNombre(String nombre) {
+
+        nombre = nombre.toUpperCase();
+
+        if (nombre.length() < 1) {
+
+            System.out.print("El nombre del personaje no puede quedar vacio");
+
+        }
+
         switch (nombre) {
-            case "tonto":
-                System.out.println("No puedes colocar un insulto como un nombre");
+
+            case "WEON":
+
+                this.nombre = "****";
+
                 break;
-            case "sopenco":
-                System.out.println("No puedes colocar un insulto como un nombre");
+
+            case "ESTUPIDO":
+
+                this.nombre = "****";
+
                 break;
-            case "conchudo":
-                System.out.println("No puedes colocar un insulto como un nombre");
+
+            case "SOPENKO":
+
+                this.nombre = "****";
+
                 break;
-            case "weon":
-                System.out.println("No puedes colocar un insulto como un nombre");
+
+            case "SOPENCO":
+
+                this.nombre = "****";
+
                 break;
-            case "pipi":
-                System.out.println("No puedes colocar un insulto como un nombre");
+
+            case "IDIOTA":
+
+                this.nombre = "****";
+
                 break;
-            case "caca":
-                System.out.println("No puedes colocar un insulto como un nombre");
-                break;
-        
+
             default:
+
+                this.nombre = nombre;
+
                 break;
+
         }
+
     }
 
-    public String getNombre(){
+    public String mostrarNombre() {
+
         return this.nombre;
+
     }
 
+    public void setVida(int vida) {
 
-    public void setVida(int vida){ //esto quiere guardar la vida no darla
-        if (vida < 0){
+        if (vida < 0) {
+
             System.out.print("La vida del personaje no puede ser negativa. Que demonios haces!");
+
             this.vida = 0;
-        } else{
+
+        } else {
+
             this.vida = vida;
+
         }
+
     }
 
-    public int getVida(){
-        return this.vida;
-    }
+    public int getVida() {
 
-    public void setEdad(int edad){
-        if (vida < 0){
-            System.out.println("La edad no puede ser negativa, se le asigna la edad de 18 por defecto");
-            this.edad = 18;
-        }
-        else{
-            this.edad = edad;
-        }
-    }
+        return vida;
 
-    public int getEdad(){
-        return this.edad;
     }
-
 
 }
-

@@ -1,23 +1,12 @@
-// la abstraccion un objeto que se lleva a la realidad por ejemplo un artista hace una pintura del paisaje eso es abstraccion y dentro de la abstraccion hay atributos (caracteristicas)
-// encapsulamiento 
+personaje_jugador.nombre //Esto es un atributos
 
-//personaje 
+personaje_jugador.setNombre //Esto es un metodo
 
-
-atributos tiene caracteristicas y comportamiento
-
-//caracteristicas
-*/ String name;
-    String lastName;
-    int life;
-    boolean isHeAlive = true;
+length() ver la cantidad de caracteres
+toUpperCase(); transformar a mayuscula
 
 
-//comportamiento 
 
-void eat();
-int attack();
 
-¿Que es un UML?
 
-//Reglas del dominio
+hacer que el metodo crear personaje me permita selecionar el tipo de personja que deseo crear ademas de uno propio (hacer,programador y GameDev) no se olvide de agragar los metodos y
