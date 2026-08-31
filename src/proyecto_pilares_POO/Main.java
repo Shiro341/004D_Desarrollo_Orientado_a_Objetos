@@ -1,3 +1,4 @@
+package proyecto_pilares_POO;
 import java.util.Scanner;
 
 public class Main {

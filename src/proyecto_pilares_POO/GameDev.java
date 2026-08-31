@@ -1,3 +1,4 @@
+package proyecto_pilares_POO;
 public class GameDev extends Personaje {
     int inspiracion;
 

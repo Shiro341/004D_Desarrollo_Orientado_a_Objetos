@@ -1,3 +1,4 @@
+package proyecto_pilares_POO;
 public class Personaje {
 
     private String nombre;
