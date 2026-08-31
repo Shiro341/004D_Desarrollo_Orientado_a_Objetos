@@ -1,12 +1,24 @@
-personaje_jugador.nombre //Esto es un atributos
-
-personaje_jugador.setNombre //Esto es un metodo
-
-length() ver la cantidad de caracteres
-toUpperCase(); transformar a mayuscula
+firma = los metodos hija debe tener la mismo nombre para modificarlo
 
 
+@Override
+public void hablar() debe ser exactamente lo mismo
+cambia el metodo que ya exite en el padre
+
+excalidraw.com
+
+tipo de datos = int o String, exactamente
+
+luego sigue la Nombre del la varaible/Atributo
+
+luego el valor de esa varaible
+
+//int edad = 30;
+
+instancia es un model 
 
 
+super hace que clase padre e hija se ejecuten los dos al mismo tiempo
 
-hacer que el metodo crear personaje me permita selecionar el tipo de personja que deseo crear ademas de uno propio (hacer,programador y GameDev) no se olvide de agragar los metodos y
+el super es para metodos no para atributos
+

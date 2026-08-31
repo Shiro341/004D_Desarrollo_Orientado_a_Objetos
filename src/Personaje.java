@@ -8,6 +8,11 @@ public class Personaje {
 
     boolean esta_vivo = true;
 
+
+
+
+
+
     public void validarNombre(String nombre) {
 
         nombre = nombre.toUpperCase();
@@ -87,5 +92,13 @@ public class Personaje {
         return vida;
 
     }
+
+    public void trabajar(){
+
+        System.out.println("Chambeando");
+
+    }
+
+
 
 }
