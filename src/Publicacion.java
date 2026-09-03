@@ -3,25 +3,18 @@ public class Publicacion {
     private String autor;
     private String fechaCreacion;
     private int likes;
-    boolean estaActiva;
+    protected boolean estaActiva;
 
 
-    public void Publicacion(String id, String autor){//seter
-        if()
-       this.id = id;
-       this.autor = autor;
+
+    public Publicacion(String id, String autor){
+        this.id = id;
+        this.autor = autor;
+        this.likes = 0;
     }
 
-    public void darLike(){
-        if(darl)
-    }
 
-    public void mostrarDetalle(){
-
-    }
-
-    public boolean validarAutor(String autor){
-        return this.autor.length() >= 2;
+    public void setId(String id) {
 
     }
 
@@ -29,13 +22,28 @@ public class Publicacion {
         return this.id;
     }
 
-    public int getLikes(){
+    public void setAutor(String autor){
+        if (autor.length() > 20) {
+            System.out.println("El nombre no puede exceder los 20 caracteres");
+        }
+        else {
+            this.autor = autor;
+        }
+    }
+
+
+    public String getAutor(){
+        return this.autor;
+    }
+
+
+    public void setDarLike(){
+        this.likes = this.likes + 1;
+    }
+
+    public int getDarLike(){
         return this.likes;
-
     }
 
-    public boolean isEstaActiva(){
-        return this.
-    }
 
 }
