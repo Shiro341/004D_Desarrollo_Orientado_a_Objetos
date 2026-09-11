@@ -1,3 +1,4 @@
+package Proyecto_Instagram;
 import java.time.LocalDate;
 
 public abstract class Publicacion {
