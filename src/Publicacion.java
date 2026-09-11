@@ -1,32 +1,61 @@
-public class Publicacion {
+import java.time.LocalDate;
+
+public abstract class Publicacion {
     private String id;
     private String autor;
     private String fechaCreacion;
     private int likes;
-    boolean estaActiva;
+    protected boolean estaActiva;
 
 
-    public void Publicacion(String id, String autor){//seter
-        if()
-       this.id = id;
-       this.autor = autor;
+    public Publicacion(String id, String autor){
+        if (validarId(id)){
+            this.id = id;
+        }
+
+        else {
+            System.out.println("Error: id inválido.");
+        }
+
+
+        if (validarAutor(autor)){
+            this.autor = autor;
+        }
+
+        else {
+            System.out.println("Error: autor inválido.");
+        }
+
+        this.estaActiva = true;
+        this.fechaCreacion = LocalDate.now().toString(); 
     }
 
-    public void darLike(){
-        if(darl)
-    }
 
-    public void mostrarDetalle(){
-
-    }
-
-    public boolean validarAutor(String autor){
-        return this.autor.length() >= 2;
-
+    public boolean validarId(String id){
+        return !id.strip().isEmpty();
     }
 
     public String getId(){
         return this.id;
+    }
+
+    public boolean validarAutor(String autor){
+        return autor.strip().length() >= 2 && autor.strip().length() <= 50;
+
+    }
+    
+    public String getAutor(){
+        return this.autor;
+    }
+
+
+    public String getFechaCreacion(){
+        return this.fechaCreacion;
+    }
+
+    public void darLike(){
+        this.likes++;
+    
     }
 
     public int getLikes(){
@@ -35,7 +64,8 @@ public class Publicacion {
     }
 
     public boolean isEstaActiva(){
-        return this.
+        return this.estaActiva;
     }
 
+    public abstract void mostrarDetalle();  
 }
