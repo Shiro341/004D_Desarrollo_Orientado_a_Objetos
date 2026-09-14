@@ -24,6 +24,7 @@ public class Tienda {
             System.out.println("4. Vender producto");
             System.out.println("5. Resumen del inventario");
             System.out.println("6. Salir");
+            System.out.println("7.Insertar datos de prueba");
 
             String opcion_menu = sc.nextLine();
 
@@ -36,16 +37,20 @@ public class Tienda {
                     listarInventario();
                     break;
                 case "3":
-
+                    buscarProductoPorNombre();
                     break;
                 case "4":
-
+                    venderProductoPorNombre();
                     break;
                 case "5":
 
                     break;
                 case "6":
 
+                    break;
+
+                case "7":
+                    insertarDatosDePrueba();
                     break;
 
                 default:
@@ -125,10 +130,63 @@ public class Tienda {
     }
 
     static public void listarInventario(){
-        System.out.println("Listado de juegos Físico");
-        for (ProductoFisico productofFisico : coleccionJuegosFisicos) {
-            System.out.println(productofFisico.mostrarInfo());
+        System.out.println("===INVENTARIO DE JUEGOS FISICOS===");
+        for (ProductoFisico juegoFisico : coleccionJuegosFisicos){
+            System.out.println(juegoFisico.mostrarInfo());
+        }
+
+        System.out.println("===INVENTARIO DE JUEGOS DIGITALES===");
+        for (ProductoDigital juegoDigital : coleccionJuegosDigital){
+            System.out.println(juegoDigital.mostrarInfo());
+        }
+        
+    }
+
+    static void insertarDatosDePrueba(){
+        coleccionJuegosFisicos.add(new ProductoFisico("Pokemon Escudo", 45000, 10, 2500));
+        coleccionJuegosFisicos.add(new ProductoFisico("Factorio", 28000, 60, 2500));
+        coleccionJuegosFisicos.add(new ProductoFisico("PES 2017", 32000, 100, 3500));
+
+
+
+    
+    }
+    
+    static void buscarProductoPorNombre(){
+        System.out.println("===INGRESE NOMBRE DEL JUEGO A BUSCAR===)");
+        String nombre_a_buscar = sc.nextLine();
+
+        for( ProductoFisico juego : coleccionJuegosFisicos){
+            if(juego.getNombre().contains(nombre_a_buscar)){
+                System.out.println(juego.mostrarInfo());
+            }
+        }
+
+        for( ProductoDigital juego : coleccionJuegosDigital){
+            if(juego.getNombre().contains(nombre_a_buscar)){
+                System.out.println(juego.mostrarInfo());
+            }
         }
     }
+
+    static void venderProductoPorNombre(){
+        System.out.println("===VENTA DEL JUEGO===");
+        buscarProductoPorNombre();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

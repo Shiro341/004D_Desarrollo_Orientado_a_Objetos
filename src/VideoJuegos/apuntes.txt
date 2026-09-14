@@ -1,0 +1,5 @@
+control clic para saber de donde biene las cosas 
+
+forearch
+
+cuando escribes el nombre de la variable debe siempre tener el tipo de variable

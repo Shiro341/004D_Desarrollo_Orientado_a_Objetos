@@ -22,7 +22,7 @@ public class ProductoDigital extends Producto{
     @Override
     public int calcularPrecioFinal() {
         
-        return (getPrecioBase() * this.descuento) / 100;
+        return getPrecioBase() - (getPrecioBase() * this.descuento) / 100;
     }
 
     @Override
