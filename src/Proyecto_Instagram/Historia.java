@@ -1,7 +1,7 @@
 package Proyecto_Instagram;
 public class Historia extends Publicacion {
-    private int duracionHoras = 24;
-    private boolean esMejoresAmigos;
+    final int duracionHoras = 24;
+    final boolean esMejoresAmigos;
     private int visitas;
 
 
@@ -21,7 +21,7 @@ public class Historia extends Publicacion {
         System.out.println("Visitas: " + visitas);
         System.out.println("Estado: " + isEstaActiva());
         System.out.println("Mejores Amigos: " + esMejoresAmigos);
-        System.out.println("Duracion: " + duracionHoras + "Horas");
+        System.out.println("Duracion: " + duracionHoras + " Horas");
         
     }
 

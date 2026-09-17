@@ -2,7 +2,7 @@ package Proyecto_Instagram;
 public class Reel extends Publicacion {
 
     private int duracionSegundos;
-    private String audioNombre;
+    final String audioNombre;
     private int reproducciones;
 
     

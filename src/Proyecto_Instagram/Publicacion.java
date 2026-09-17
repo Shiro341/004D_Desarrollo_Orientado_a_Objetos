@@ -4,7 +4,7 @@ import java.time.LocalDate;
 public abstract class Publicacion {
     private String id;
     private String autor;
-    private String fechaCreacion;
+    final String fechaCreacion;
     private int likes;
     protected boolean estaActiva;
 
@@ -32,7 +32,7 @@ public abstract class Publicacion {
     }
 
 
-    public boolean validarId(String id){
+    private boolean validarId(String id){
         return !id.strip().isEmpty();
     }
 
@@ -40,11 +40,10 @@ public abstract class Publicacion {
         return this.id;
     }
 
-    public boolean validarAutor(String autor){
+    private boolean validarAutor(String autor){
         return autor.strip().length() >= 2 && autor.strip().length() <= 50;
 
     }
-    
     public String getAutor(){
         return this.autor;
     }
