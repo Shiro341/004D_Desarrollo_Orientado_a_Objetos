@@ -25,7 +25,7 @@ public class Historia extends Publicacion {
         
     }
 
-    public void registrarVisita(){
+    public void registrarVista(){
         if(isEstaActiva()){
             this.visitas++;
         }
