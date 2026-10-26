@@ -1,0 +1,11 @@
+{
+  "libros": [
+    { "titulo": "Clean Code", "cantidadDisponible": 3 },
+    { "titulo": "Cien años de soledad", "cantidadDisponible": 2 },
+    { "titulo": "El Principito", "cantidadDisponible": 1 }
+  ],
+  "revistas": [
+    { "titulo": "National Geographic", "cantidadDisponible": 2 },
+    { "titulo": "Muy Interesante", "cantidadDisponible": 1 }
+  ]
+}
